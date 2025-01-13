@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление в Telegram-бота</title>
+</head>
+<body>
+    <h1>Добавь меня в Telegram!</h1>
+    <a id="botLink" href="#">Ссылка будет сгенерирована...</a>
+
+    <script>
+        function generateLink() {
+            const uniqueId = Math.random().toString(36).substring(2, 15); // Генерация уникального ID
+            const link = `https://t.me/viperpubbot?start=${uniqueId}`; // Замените 'your_bot' на имя вашего бота
+            document.getElementById("botLink").href = link;
+            document.getElementById("botLink").innerText = "Нажмите здесь, чтобы добавить бота";
+        }
+        window.onload = generateLink; // Генерируем ссылку при загрузке страницы
+    </script>
+</body>
+</html>
